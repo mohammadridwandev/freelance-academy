@@ -98,18 +98,21 @@ const Footer = ({
               </div>
             ))}
           </div>
-          <div className="mt-20 flex flex-col justify-between gap-4 border-t pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
+
+          <div className="mt-20 flex flex-col justify-between gap-2 border-t pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
             {/* Colorful 2026 Copyright */}
             <p className="text-gray-500">
               {copyright}
             </p>
-            <ul className="flex gap-4">
+
+            <ul className="flex gap-4 items-center justify-center  ">
               {bottomLinks.map((link, linkIdx) => (
                 <li key={linkIdx} className="underline hover:text-primary transition-colors">
                   <a href={link.url}>{link.text}</a>
                 </li>
               ))}
             </ul>
+
           </div>
 
 

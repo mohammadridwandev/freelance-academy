@@ -132,6 +132,7 @@ const Navbar = ({
               <a href={auth.signup.url}>{auth.signup.title}</a>
             </Button>
           </div>
+
         </nav>
 
         {/* Mobile Menu */}
@@ -144,7 +145,6 @@ const Navbar = ({
             </Link>
 
             <Sheet>
-
              
 
               <SheetTrigger asChild>
@@ -155,7 +155,9 @@ const Navbar = ({
                 </Button>
 
               </SheetTrigger>
-              <SheetContent className="overflow-y-auto">
+
+              <SheetContent className="overflow-y-auto   w-70 ">
+
                 <SheetHeader>
                   <SheetTitle>
                     <Link href={"/"} className="font-bold text-2xl">
@@ -163,7 +165,9 @@ const Navbar = ({
                     </Link>
                   </SheetTitle>
                 </SheetHeader>
-                <div className="flex flex-col gap-6 p-4">
+
+                <div className="flex flex-col gap-6  p-4">
+
                   <Accordion
                     type="single"
                     collapsible
@@ -173,15 +177,21 @@ const Navbar = ({
                   </Accordion>
 
                   <div className="flex flex-col gap-3">
+
                     <Button asChild variant="outline">
                       <a href={auth.login.url}>{auth.login.title}</a>
                     </Button>
                     <Button asChild>
                       <a href={auth.signup.url}>{auth.signup.title}</a>
                     </Button>
+
                   </div>
+
                 </div>
+
+
               </SheetContent>
+
             </Sheet>
 
           </div>
@@ -244,20 +254,23 @@ const renderMobileMenuItem = (item: MenuItem) => {
 
 const SubMenuLink = ({ item }: { item: MenuItem }) => {
   return (
+
     <a
-      className="flex min-w-80 flex-row gap-4 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-muted hover:text-accent-foreground"
+      className="flex lg:w-96 border border-gray-100 mb-3 flex-row gap-4 rounded-md p-3  no-underline transition-colors outline-none select-none hover:bg-muted hover:text-accent-foreground"
       href={item.url}
     >
       <div className="text-foreground">{item.icon}</div>
-      <div>
+
+      <div className=" ">
         <div className="text-sm font-semibold">{item.title}</div>
         {item.description && (
-          <p className="text-sm leading-snug text-muted-foreground">
+          <p className="text-[14px] text-muted-foreground">
             {item.description}
           </p>
         )}
       </div>
     </a>
+
   );
 };
 
