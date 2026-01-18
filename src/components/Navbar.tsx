@@ -1,6 +1,5 @@
 "use client";
 
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -27,6 +26,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
+import { Megaphone, Menu, Monitor, Palette, Video } from "lucide-react";
 
 interface MenuItem {
   title: string;
@@ -59,79 +59,45 @@ interface Navbar1Props {
 }
 
 const Navbar = ({
- 
+
 
   menu = [
-    { title: "Home", url: "#" },
+    { title: "Home", url: "/" },
+    { title: "About", url: "/" },
     {
-      title: "Products",
+      title: "Courses",
       url: "#",
       items: [
         {
-          title: "Blog",
-          description: "The latest industry news, updates, and info",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
+          title: "Web Design",
+          description: "Master modern UI/UX and frontend development with React & Next.js.",
+          icon: <Monitor className="size-5 shrink-0" />,
+          url: "/",
         },
         {
-          title: "Company",
-          description: "Our mission is to innovate and empower the world",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
+          title: "Graphics Design",
+          description: "Learn branding, typography, and professional asset creation.",
+          icon: <Palette className="size-5 shrink-0" />,
+          url: "/",
         },
         {
-          title: "Careers",
-          description: "Browse job listing and discover our workspace",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
+          title: "Video Editing",
+          description: "High-end post-production for social media and commercial films.",
+          icon: <Video className="size-5 shrink-0" />,
+          url: "/",
         },
         {
-          title: "Support",
-          description:
-            "Get in touch with our support team or visit our community forums",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
+          title: "Digital Marketing",
+          description: "Master SEO, SMM, and freelance marketplace strategies.",
+          icon: <Megaphone className="size-5 shrink-0" />,
+          url: "/",
         },
       ],
     },
-    {
-      title: "Resources",
-      url: "#",
-      items: [
-        {
-          title: "Help Center",
-          description: "Get all the answers you need right here",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Contact Us",
-          description: "We are here to help you with any questions you have",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Status",
-          description: "Check the current status of our services and APIs",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Terms of Service",
-          description: "Our terms and conditions for using our services",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
-        },
-      ],
-    },
-
-
-
-    {
-      title: "Blog",
-      url: "#",
-    },
+    { title: "Contact", url: "/" },
   ],
+
+
   auth = {
     login: { title: "Login", url: "#" },
     signup: { title: "Sign up", url: "#" },
@@ -143,10 +109,11 @@ const Navbar = ({
       <div className="container m-auto px-4">
         {/* Desktop Menu */}
         <nav className="hidden items-center justify-between lg:flex">
-
           <div className="flex items-center w-full me-5 justify-between gap-6">
             {/* Logo */}
-           <Link href={"/"} className="font-bold text-2xl">Freelance A</Link>
+            <Link href={"/"} className="font-bold text-2xl">
+              Freelance A
+            </Link>
 
             <div className="flex items-center">
               <NavigationMenu>
@@ -155,7 +122,6 @@ const Navbar = ({
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
-
           </div>
 
           <div className="flex gap-2">
@@ -166,27 +132,35 @@ const Navbar = ({
               <a href={auth.signup.url}>{auth.signup.title}</a>
             </Button>
           </div>
-
-          
         </nav>
 
         {/* Mobile Menu */}
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
+
             {/* Logo */}
-             <Link href={"/"} className="font-bold text-2xl">Freelance A</Link>
+            <Link href={"/"} className="font-bold text-2xl">
+              Freelance A
+            </Link>
 
             <Sheet>
+
+             
+
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon">
+
+
+                <Button variant="outline" size="icon" className="">
                   <Menu className="size-4" />
                 </Button>
+
               </SheetTrigger>
               <SheetContent className="overflow-y-auto">
                 <SheetHeader>
                   <SheetTitle>
-                    <Link href={"/"} className="font-bold text-2xl">Freelance A</Link>
-
+                    <Link href={"/"} className="font-bold text-2xl">
+                      Freelance A
+                    </Link>
                   </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-6 p-4">
@@ -209,6 +183,7 @@ const Navbar = ({
                 </div>
               </SheetContent>
             </Sheet>
+
           </div>
         </div>
       </div>

@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const HeroSection = ({ className }: { className?: string }) => {
-  const badge = "Your Website";
-  const heading = "Blocks Built With Shadcn & Tailwind";
-  const description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.";
+  const badge = "Freelance Academy Chattogram";
+  const heading = "Master Digital Skills in Chattogram";
+  const description = "Advance your career with expert-led training in Web Development, Graphics Design, Video Editing, and Digital Marketing.";
 
   const buttons = {
     primary: {
@@ -31,14 +31,14 @@ const HeroSection = ({ className }: { className?: string }) => {
 {/* content  */}
           <div className="lg:order-first order-last  gap-5 flex flex-col items-center  lg:items-start lg:text-left">
 
-           <div className="flex items-start  w-full">
-             <Badge variant="outline" className="">
+           <div className="flex items-start w-full">
+             <Badge variant="outline" className="p-1 px-4">
               {badge}
               <ArrowUpRight className=" size-4" />
             </Badge>
            </div>
 
-            <h1 className="text-4xl font-bold text-pretty lg:text-6xl">
+            <h1 className="text-3xl font-bold text-pretty lg:text-6xl">
               {heading}
             </h1>
 
@@ -46,7 +46,7 @@ const HeroSection = ({ className }: { className?: string }) => {
               {description}
             </p>
 
-            <div className="  w-full flex items-center gap-5">
+            <div className="w-full flex items-center gap-5">
 
               <Button asChild className=" sm:w-auto">
                 <a href={buttons.primary.url}>{buttons.primary.text}</a>
