@@ -58,7 +58,7 @@ interface Navbar1Props {
   };
 }
 
-const Navbar1 = ({
+const Navbar = ({
  
 
   menu = [
@@ -286,4 +286,4 @@ const SubMenuLink = ({ item }: { item: MenuItem }) => {
   );
 };
 
-export { Navbar1 };
+export { Navbar };

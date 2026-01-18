@@ -28,7 +28,7 @@ interface Footer2Props {
   }[];
 }
 
-const Footer2 = ({
+const Footer = ({
 
 
   className,
@@ -124,4 +124,4 @@ const Footer2 = ({
   );
 };
 
-export { Footer2 };
+export { Footer };

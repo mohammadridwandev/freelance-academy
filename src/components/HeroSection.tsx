@@ -4,30 +4,39 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-const Hero1 = ({ className }: { className?: string }) => {
+const HeroSection = ({ className }: { className?: string }) => {
   const badge = "Your Website";
   const heading = "Blocks Built With Shadcn & Tailwind";
   const description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.";
+
   const buttons = {
     primary: {
-      text: "Discover all components",
+      text: "Explore Course",
       url: "#",
     },
     secondary: {
-      text: "View on GitHub",
+      text: "Join Seminar",
       url: "#",
     },
+
   };
 
+
   return (
-    <section className={cn("py-32", className)}>
+    <section className={cn("py-16", className)}>
       <div className="container m-auto px-4">
+
         <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
-          <div className="gap-5 flex flex-col items-center text-center lg:items-start lg:text-left">
-            <Badge variant="outline">
+
+{/* content  */}
+          <div className="lg:order-first order-last  gap-5 flex flex-col items-center  lg:items-start lg:text-left">
+
+           <div className="flex items-start  w-full">
+             <Badge variant="outline" className="">
               {badge}
-              <ArrowUpRight className="ml-2 size-4" />
+              <ArrowUpRight className=" size-4" />
             </Badge>
+           </div>
 
             <h1 className="text-4xl font-bold text-pretty lg:text-6xl">
               {heading}
@@ -37,31 +46,40 @@ const Hero1 = ({ className }: { className?: string }) => {
               {description}
             </p>
 
-            <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-              <Button asChild className="w-full sm:w-auto">
+            <div className="  w-full flex items-center gap-5">
+
+              <Button asChild className=" sm:w-auto">
                 <a href={buttons.primary.url}>{buttons.primary.text}</a>
               </Button>
-              <Button asChild variant="outline" className="w-full sm:w-auto">
+
+              <Button asChild variant="outline" className=" sm:w-auto">
                 <a href={buttons.secondary.url}>
                   {buttons.secondary.text}
                   <ArrowRight className="size-4" />
                 </a>
               </Button>
+
             </div>
+
           </div>
 
-          <Image 
+{/* hero image */}
+          <div className="lg:order-last order-first">
+            <Image 
             width={850} 
             height={450} 
             alt="hero image" 
             src="/hero image.jpeg"
             priority
-            className="rounded-md object-cover" 
+            className="rounded-sm object-cover" 
           />
+          </div>
+          
         </div>
+
       </div>
     </section>
   );
 };
 
-export { Hero1 };
+export { HeroSection };
