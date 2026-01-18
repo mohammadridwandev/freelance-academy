@@ -1,6 +1,5 @@
 "use client";
 
-
 import { cn } from "@/lib/utils";
 
 import {
@@ -23,10 +22,14 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
+  // Added SheetClose to allow custom close implementation
+  SheetClose,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
-import { Megaphone, Menu, Monitor, Palette, Video } from "lucide-react";
+import { Megaphone, Menu, Monitor, Palette, Video, X } from "lucide-react";
+// Import SheetPrimitive if you need to use the low-level close component
+import * as SheetPrimitive from "@radix-ui/react-dialog";
 
 interface MenuItem {
   title: string;
@@ -59,8 +62,6 @@ interface Navbar1Props {
 }
 
 const Navbar = ({
-
-
   menu = [
     { title: "Home", url: "/" },
     { title: "About", url: "/" },
@@ -70,19 +71,22 @@ const Navbar = ({
       items: [
         {
           title: "Web Design",
-          description: "Master modern UI/UX and frontend development with React & Next.js.",
+          description:
+            "Master modern UI/UX and frontend development with React & Next.js.",
           icon: <Monitor className="size-5 shrink-0" />,
           url: "/",
         },
         {
           title: "Graphics Design",
-          description: "Learn branding, typography, and professional asset creation.",
+          description:
+            "Learn branding, typography, and professional asset creation.",
           icon: <Palette className="size-5 shrink-0" />,
           url: "/",
         },
         {
           title: "Video Editing",
-          description: "High-end post-production for social media and commercial films.",
+          description:
+            "High-end post-production for social media and commercial films.",
           icon: <Video className="size-5 shrink-0" />,
           url: "/",
         },
@@ -97,7 +101,6 @@ const Navbar = ({
     { title: "Contact", url: "/" },
   ],
 
-
   auth = {
     login: { title: "Login", url: "#" },
     signup: { title: "Sign up", url: "#" },
@@ -109,7 +112,7 @@ const Navbar = ({
       <div className="container m-auto px-4">
         {/* Desktop Menu */}
         <nav className="hidden items-center justify-between lg:flex">
-          <div className="flex items-center w-full me-5 justify-between gap-6">
+          <div className="flex items-center  w-full me-5 justify-between gap-6">
             {/* Logo */}
             <Link href={"/"} className="font-bold text-2xl">
               Freelance A
@@ -132,42 +135,41 @@ const Navbar = ({
               <a href={auth.signup.url}>{auth.signup.title}</a>
             </Button>
           </div>
-
         </nav>
 
         {/* Mobile Menu */}
-        <div className="block lg:hidden">
+        <div className="block  lg:hidden">
           <div className="flex items-center justify-between">
-
             {/* Logo */}
             <Link href={"/"} className="font-bold text-2xl">
               Freelance A
             </Link>
 
             <Sheet>
-             
-
               <SheetTrigger asChild>
-
-
                 <Button variant="outline" size="icon" className="">
                   <Menu className="size-4" />
                 </Button>
-
               </SheetTrigger>
 
-              <SheetContent className="overflow-y-auto   w-70 ">
+              <SheetContent className="overflow-y-auto  w-70 ">
+               
+                <SheetHeader className="border flex flex-row items-center justify-between">
 
-                <SheetHeader>
                   <SheetTitle>
                     <Link href={"/"} className="font-bold text-2xl">
                       Freelance A
                     </Link>
                   </SheetTitle>
+                  
+                  {/* Custom Close Area - Add your new icon here */}
+                  <SheetPrimitive.Close className="p-1 bg-slate-50 text-gray-600 rounded-sm hover:text-gray-900 cursor-pointer border border-gray-50">
+                    <X className="size-6" />
+                  </SheetPrimitive.Close>
+
                 </SheetHeader>
 
-                <div className="flex flex-col gap-6  p-4">
-
+                <div className="flex  flex-col gap-6  p-4">
                   <Accordion
                     type="single"
                     collapsible
@@ -177,23 +179,16 @@ const Navbar = ({
                   </Accordion>
 
                   <div className="flex flex-col gap-3">
-
                     <Button asChild variant="outline">
                       <a href={auth.login.url}>{auth.login.title}</a>
                     </Button>
                     <Button asChild>
                       <a href={auth.signup.url}>{auth.signup.title}</a>
                     </Button>
-
                   </div>
-
                 </div>
-
-
               </SheetContent>
-
             </Sheet>
-
           </div>
         </div>
       </div>
@@ -254,7 +249,6 @@ const renderMobileMenuItem = (item: MenuItem) => {
 
 const SubMenuLink = ({ item }: { item: MenuItem }) => {
   return (
-
     <a
       className="flex lg:w-96 border border-gray-100 mb-3 flex-row gap-4 rounded-md p-3  no-underline transition-colors outline-none select-none hover:bg-muted hover:text-accent-foreground"
       href={item.url}
@@ -270,7 +264,6 @@ const SubMenuLink = ({ item }: { item: MenuItem }) => {
         )}
       </div>
     </a>
-
   );
 };
 
