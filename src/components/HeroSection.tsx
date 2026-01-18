@@ -7,7 +7,8 @@ import Image from "next/image";
 const HeroSection = ({ className }: { className?: string }) => {
   const badge = "Freelance Academy Chattogram";
   const heading = "Master Digital Skills in Chattogram";
-  const description = "Advance your career with expert-led training in Web Development, Graphics Design, Video Editing, and Digital Marketing.";
+  const description =
+    "Advance your career with expert-led training in Web Development, Graphics Design, Video Editing, and Digital Marketing.";
 
   const buttons = {
     primary: {
@@ -18,25 +19,23 @@ const HeroSection = ({ className }: { className?: string }) => {
       text: "Join Seminar",
       url: "#",
     },
-
   };
 
-
   return (
-    <section className={cn("py-16", className)}>
-      <div className="container m-auto px-4">
-
+    <section className={cn("lg:py-16", className)}>
+      <div className="container m-auto ">
         <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
+          {/* content  */}
+          <div className="lg:order-first order-last px-4 gap-5 flex flex-col items-center  lg:items-start lg:text-left">
+            
+            <div className="flex items-start w-full">
 
-{/* content  */}
-          <div className="lg:order-first order-last  gap-5 flex flex-col items-center  lg:items-start lg:text-left">
-
-           <div className="flex items-start w-full">
-             <Badge variant="outline" className="p-1 px-4">
-              {badge}
-              <ArrowUpRight className=" size-4" />
-            </Badge>
-           </div>
+              <Badge variant="outline" className="p-1 px-4">
+                {badge}
+                <ArrowUpRight className=" size-4" />
+              </Badge>
+              
+            </div>
 
             <h1 className="text-3xl font-bold text-pretty lg:text-6xl">
               {heading}
@@ -47,7 +46,6 @@ const HeroSection = ({ className }: { className?: string }) => {
             </p>
 
             <div className="w-full flex items-center gap-5">
-
               <Button asChild className=" sm:w-auto">
                 <a href={buttons.primary.url}>{buttons.primary.text}</a>
               </Button>
@@ -58,25 +56,24 @@ const HeroSection = ({ className }: { className?: string }) => {
                   <ArrowRight className="size-4" />
                 </a>
               </Button>
-
             </div>
 
+
           </div>
 
-{/* hero image */}
+          {/* hero image */}
           <div className="lg:order-last order-first">
-            <Image 
-            width={850} 
-            height={450} 
-            alt="hero image" 
-            src="/hero image.jpeg"
-            priority
-            className="rounded-sm object-cover" 
-          />
+            <Image
+              width={850}
+              height={450}
+              alt="hero image"
+              src="/hero image.jpeg"
+              priority
+              className="lg:rounded-sm object-cover"
+            />
           </div>
-          
-        </div>
 
+        </div>
       </div>
     </section>
   );
