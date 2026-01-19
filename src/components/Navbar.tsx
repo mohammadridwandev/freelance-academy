@@ -64,41 +64,41 @@ interface Navbar1Props {
 const Navbar = ({
   menu = [
     { title: "Home", url: "/" },
-    { title: "About", url: "/" },
+    { title: "About", url: "/about" },
     {
       title: "Courses",
-      url: "#",
+      url: "/courses",
       items: [
         {
           title: "Web Design",
           description:
             "Master modern UI/UX and frontend development with React & Next.js.",
           icon: <Monitor className="size-5 shrink-0" />,
-          url: "/",
+          url: "/courses",
         },
         {
           title: "Graphics Design",
           description:
             "Learn branding, typography, and professional asset creation.",
           icon: <Palette className="size-5 shrink-0" />,
-          url: "/",
+          url: "/courses",
         },
         {
           title: "Video Editing",
           description:
             "High-end post-production for social media and commercial films.",
           icon: <Video className="size-5 shrink-0" />,
-          url: "/",
+          url: "/courses",
         },
         {
           title: "Digital Marketing",
           description: "Master SEO, SMM, and freelance marketplace strategies.",
           icon: <Megaphone className="size-5 shrink-0" />,
-          url: "/",
+          url: "/courses",
         },
       ],
     },
-    { title: "Contact", url: "/" },
+    { title: "Contact", url: "/contact" },
   ],
 
   auth = {

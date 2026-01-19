@@ -4,6 +4,8 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import ContactHub from "@/components/ContactHub";
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +34,9 @@ export default function RootLayout({
       >
         <Navbar></Navbar>
         {children}
+
         <Footer></Footer>
+      <Toaster />
 
       <div>
         <ContactHub></ContactHub>

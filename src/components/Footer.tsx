@@ -64,10 +64,12 @@ const Footer = ({
   ],
 }: Footer2Props) => {
   return (
-    <section className={cn("py-16 border-t border-gray-100", className)}>
+    <section className={cn("lg:py-16 py-5 pb-10 border-t border-gray-100", className)}>
 
       <div className="container m-auto px-4">
+
         <footer>
+
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
             <div className="col-span-2 mb-8 lg:mb-0">
               <div className="flex items-center gap-2 lg:justify-start">
@@ -99,7 +101,7 @@ const Footer = ({
             ))}
           </div>
 
-          <div className="mt-20 flex flex-col justify-between gap-2 border-t pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
+          <div className="mt-10 flex flex-col justify-between gap-2 border-t pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
             {/* Colorful 2026 Copyright */}
             <p className="text-gray-500">
               {copyright}

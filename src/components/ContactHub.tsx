@@ -21,7 +21,7 @@ const ContactHub = () => {
     {
       icon: <FaPhoneAlt className="size-4" />,
       color: "bg-gray-800",
-      link: "tel:+880123456789",
+      link: "tel:+880 1608-010885",
     },
   ];
 

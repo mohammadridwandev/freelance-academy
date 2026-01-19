@@ -37,7 +37,7 @@ const HeroSection = ({ className }: { className?: string }) => {
               
             </div>
 
-            <h1 className="text-3xl font-bold text-pretty lg:text-6xl">
+            <h1 className="text-3xl font-bold bg-linear-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent  lg:text-6xl">
               {heading}
             </h1>
 

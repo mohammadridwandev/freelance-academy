@@ -7,7 +7,7 @@ import { SectionHeader } from "./SectionHeader";
 
 const Course_Details = () => {
   return (
-    <section className="lg:py-16 py-10 bg-white">
+    <section className="py-16  bg-white">
       <div className="container mx-auto px-4">
         {/* Header Section */}
 
