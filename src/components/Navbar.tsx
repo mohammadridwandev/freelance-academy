@@ -62,6 +62,7 @@ interface Navbar1Props {
   };
 }
 
+
 const Navbar = ({
   menu = [
     { title: "Home", url: "/" },

@@ -1,5 +1,6 @@
 
-import Course_Details from "@/components/Course_Details";
+
+import AllCourse from "@/components/AllCourse";
 import { HeroSection } from "@/components/HeroSection";
 
 
@@ -10,7 +11,7 @@ export default function Home() {
   <div>
       <HeroSection></HeroSection>
 
-    <Course_Details></Course_Details>
+    <AllCourse></AllCourse>
 
   </div>
   );

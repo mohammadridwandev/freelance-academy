@@ -5,7 +5,7 @@ import { courseData } from "@/courseData";
 import Link from "next/link";
 import { SectionHeader } from "./SectionHeader";
 
-const Course_Details = () => {
+const AllCourse = () => {
   return (
     <section className="py-16  bg-white">
       <div className="container mx-auto px-4">
@@ -101,4 +101,4 @@ const Course_Details = () => {
   );
 };
 
-export default Course_Details;
+export default AllCourse;
