@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const HeroSection = ({ className }: { className?: string }) => {
-  const badge = "Freelance Academy Chattogram";
-  const heading = "Master Digital Skills in Chattogram";
+  const badge = "Freelance Academy";
+  // const heading = "Master Digital Skills in Chattogram";
   const description =
     "Advance your career with expert-led training in Web Development, Graphics Design, Video Editing, and Digital Marketing.";
 
@@ -22,30 +22,34 @@ const HeroSection = ({ className }: { className?: string }) => {
   };
 
   return (
-    <section className={cn("lg:py-16", className)}>
-      <div className="container m-auto ">
-        <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
+    <section className={cn("lg:py-10", className)}>
+      <div
+        className="max-w-6xl pb-8 lg:py-4 border border-slate-200 bg-linear-to-b sm:px-10 from-[#F5F7FF] via-[#fff1ee] to-[#E6EFFF] lg:rounded-4xl  m-auto "
+      >
+        <div className="grid p-5 items-center gap-4 lg:grid-cols-2 lg:gap-12">
           {/* content  */}
-          <div className="lg:order-first order-last px-4 gap-5 flex flex-col items-center  lg:items-start lg:text-left">
-            
-            <div className="flex items-start w-full">
 
+          <div className="lg:order-first  order-last  lg:gap-3 flex flex-col  items-center  ">
+
+            <div className="flex text-center   justify-center lg:justify-start pt-3 pb-1 w-full">
               <Badge variant="outline" className="p-1 px-4">
                 {badge}
                 <ArrowUpRight className=" size-4" />
               </Badge>
-              
             </div>
 
-            <h1 className="text-3xl font-bold bg-linear-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent  lg:text-6xl">
-              {heading}
-            </h1>
+            <div className="text-3xl lg:text-start text-center font-bold bg-linear-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent  lg:text-5xl">
 
-            <p className="max-w-xl text-muted-foreground lg:text-xl">
+              <h1> Master Digital<span className="bg-linear-to-r from-red-500 to-blue-600 bg-clip-text text-transparent"> Skills in Chattogram</span> </h1>
+
+            </div>
+
+            <p className="lg:max-w-xl t  py-4 text-[14px] lg:text-start text-center text-gray-700 lg:text-lg">
               {description}
             </p>
 
-            <div className="w-full flex items-center gap-5">
+            <div className="w-full  flex py-3 items-center lg:justify-start justify-center gap-5">
+
               <Button asChild className=" sm:w-auto">
                 <a href={buttons.primary.url}>{buttons.primary.text}</a>
               </Button>
@@ -56,8 +60,8 @@ const HeroSection = ({ className }: { className?: string }) => {
                   <ArrowRight className="size-4" />
                 </a>
               </Button>
-            </div>
 
+            </div>
 
           </div>
 
@@ -69,11 +73,13 @@ const HeroSection = ({ className }: { className?: string }) => {
               alt="hero image"
               src="/hero image.jpeg"
               priority
-              className="lg:rounded-sm object-cover"
+              className="rounded-2xl shadow-md object-cover"
             />
           </div>
 
+
         </div>
+
       </div>
     </section>
   );

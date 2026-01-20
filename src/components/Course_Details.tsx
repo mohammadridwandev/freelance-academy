@@ -16,7 +16,6 @@ const Course_Details = () => {
         </div>
 
 
-
         {/* Grid Section */}
         <div className="grid grid-cols-1  lg:grid-cols-3 gap-8">
           {courseData.map((course) => {
@@ -74,18 +73,27 @@ const Course_Details = () => {
                   </div>
 
                   {/* Minimal Action Button */}
+
                   <Link
-                    href={"/"}
-                    className="w-full  inline-flex items-center justify-center gap-2 bg-gray-800 text-white py-2 rounded-md text-base courser-pinter font-semibold transition-all hover:bg-gray-900 hover:text-white hover:border-gray-900 active:scale-95"
+                    href={course.status === "details" ? `/courses/${course.id} ` : "#"}
+
+                    className={`w-full capitalize inline-flex items-center justify-center gap-2 py-2 rounded-md text-base font-semibold transition-all active:scale-95 
+                      ${course.status === "details" 
+                        ? "bg-gray-700 text-white hover:bg-gray-800" : 
+                        "bg-gray-300 text-gray-700 cursor-not-allowed"}`}
                   >
-                    View Details
+                    
+
+                    {course.status === "details" ? "View Details" : "Upcoming"}
                     <FaArrowRight className="size-2.5" />
+
                   </Link>
 
 
                 </div>
               </div>
             );
+
           })}
         </div>
       </div>
