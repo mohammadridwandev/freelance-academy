@@ -64,7 +64,7 @@ const Footer = ({
   ],
 }: Footer2Props) => {
   return (
-    <section className={cn("lg:py-16 py-5 pb-10 border-t border-gray-100", className)}>
+    <section className={cn("lg:py-16 py-5 bg-gradient-to-b from-[#F1EAFF] to-[#FFFFFF] text-gray-800 pb-10 border-t border-gray-100", className)}>
 
       <div className="container m-auto px-4">
 
@@ -82,7 +82,6 @@ const Footer = ({
                 skills in Web Development, Graphics, and Digital Marketing to help you 
                 start your freelance career.
               </p>
-              <p className="mt-4 font-bold text-primary">Chattogram, Bangladesh</p>
             </div>
             {menuItems.map((section, sectionIdx) => (
               <div key={sectionIdx}>

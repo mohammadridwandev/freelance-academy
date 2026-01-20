@@ -30,6 +30,7 @@ import Link from "next/link";
 import { Megaphone, Menu, Monitor, Palette, Video, X } from "lucide-react";
 // Import SheetPrimitive if you need to use the low-level close component
 import * as SheetPrimitive from "@radix-ui/react-dialog";
+import Image from "next/image";
 
 interface MenuItem {
   title: string;
@@ -66,7 +67,7 @@ const Navbar = ({
     { title: "Home", url: "/" },
     { title: "About", url: "/about" },
     {
-      title: "Courses",
+      title: "All Course",
       url: "/courses",
       items: [
         {
@@ -114,8 +115,13 @@ const Navbar = ({
         <nav className="hidden items-center justify-between lg:flex">
           <div className="flex items-center  w-full me-5 justify-between gap-6">
             {/* Logo */}
-            <Link href={"/"} className="font-bold text-2xl">
-              Freelance A
+            <Link href={"/"} className="font-bold py-1 text-2xl ">
+              <Image
+                src={"/logo-text.png"}
+                width={130}
+                height={40}
+                alt="brand logo"
+              />
             </Link>
 
             <div className="flex items-center">
@@ -141,8 +147,13 @@ const Navbar = ({
         <div className="block  lg:hidden">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href={"/"} className="font-bold text-2xl">
-              Freelance A
+            <Link href={"/"} className="font-bold py-1 text-2xl ">
+              <Image
+                src={"/logo-text.png"}
+                width={100}
+                height={40}
+                alt="brand logo"
+              />
             </Link>
 
             <Sheet>
@@ -153,20 +164,25 @@ const Navbar = ({
               </SheetTrigger>
 
               <SheetContent className="overflow-y-auto  w-70 ">
-               
                 <SheetHeader className="border flex flex-row items-center justify-between">
-
                   <SheetTitle>
-                    <Link href={"/"} className="font-bold text-2xl">
-                      Freelance A
+
+                    <Link href={"/"} className="font-bold py-1 text-2xl ">
+                      <Image
+                        src={"/logo-text.png"}
+                        width={100}
+                        height={40}
+                        alt="brand logo"
+                      />
                     </Link>
+
+
                   </SheetTitle>
-                  
+
                   {/* Custom Close Area - Add your new icon here */}
                   <SheetPrimitive.Close className="p-1 bg-slate-50 text-gray-600 rounded-sm hover:text-gray-900 cursor-pointer border border-gray-50">
                     <X className="size-6" />
                   </SheetPrimitive.Close>
-
                 </SheetHeader>
 
                 <div className="flex  flex-col gap-6  p-4">
