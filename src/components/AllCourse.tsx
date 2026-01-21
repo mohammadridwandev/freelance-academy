@@ -4,6 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { courseData } from "@/courseData";
 import Link from "next/link";
 import { SectionHeader } from "./SectionHeader";
+import { DialogDemo } from "./DialogDemo";
 
 const AllCourse = () => {
   return (
@@ -11,10 +12,12 @@ const AllCourse = () => {
       <div className="container mx-auto px-4">
         {/* Header Section */}
 
-        <div >
-          <SectionHeader title="Popular Courses" description="Master in-demand digital skills through our career-focused training programs designed for the global marketplace."></SectionHeader>
+        <div>
+          <SectionHeader
+            title="Popular Courses"
+            description="Master in-demand digital skills through our career-focused training programs designed for the global marketplace."
+          ></SectionHeader>
         </div>
-
 
         {/* Grid Section */}
         <div className="grid grid-cols-1  lg:grid-cols-3 gap-8">
@@ -43,7 +46,6 @@ const AllCourse = () => {
 
                 {/* Content Area */}
                 <div className="pt-4 flex flex-col flex-1">
-
                   <h3 className="text-lg font-semibold text-gray-900 line-clamp-1 transition-colors">
                     {course.name}
                   </h3>
@@ -53,47 +55,52 @@ const AllCourse = () => {
                   </p>
 
                   {/* Pricing Block */}
-                  <div className="flex items-center gap-2 mt-4 mb-4">
-                    {hasSale ? (
-                      <>
+                  <div className="flex justify-between items-center gap-3 mt-4 mb-4">
+
+                    <div className="flex items-center gap-3">
+                      {hasSale ? (
+                        <>
+                          <span className="text-lg font-semibold text-gray-900">
+                            {course.price.currency}{" "}
+                            {course.price.sale?.toLocaleString()}
+                          </span>
+                          <span className="text-base text-gray-400 line-through">
+                            {course.price.regular.toLocaleString()}
+                          </span>
+                        </>
+                      ) : (
                         <span className="text-lg font-semibold text-gray-900">
                           {course.price.currency}{" "}
-                          {course.price.sale?.toLocaleString()}
-                        </span>
-                        <span className="text-base text-gray-400 line-through">
                           {course.price.regular.toLocaleString()}
                         </span>
-                      </>
-                    ) : (
-                      <span className="text-lg font-semibold text-gray-900">
-                        {course.price.currency}{" "}
-                        {course.price.regular.toLocaleString()}
-                      </span>
-                    )}
+                      )}
+                    </div>
+
+                    <DialogDemo buttonText="Discount" />
+
                   </div>
 
                   {/* Minimal Action Button */}
 
                   <Link
-                    href={course.status === "details" ? `/courses/${course.id} ` : "#"}
-
+                    href={
+                      course.status === "details"
+                        ? `/courses/${course.id} `
+                        : "#"
+                    }
                     className={`w-full capitalize inline-flex items-center justify-center gap-2 py-2 rounded-md text-base font-semibold transition-all active:scale-95 
-                      ${course.status === "details" 
-                        ? "bg-gray-700 text-white hover:bg-gray-800" : 
-                        "bg-gray-300 text-gray-700 cursor-not-allowed"}`}
+                      ${
+                        course.status === "details"
+                          ? "bg-gray-700 text-white hover:bg-gray-800"
+                          : "bg-gray-300 text-gray-700 cursor-not-allowed"
+                      }`}
                   >
-                    
-
                     {course.status === "details" ? "View Details" : "Upcoming"}
                     <FaArrowRight className="size-2.5" />
-
                   </Link>
-
-
                 </div>
               </div>
             );
-
           })}
         </div>
       </div>

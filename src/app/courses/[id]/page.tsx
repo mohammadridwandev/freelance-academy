@@ -68,19 +68,23 @@ export default async function CourseDetails({
           </div>
 
           {/* Row 2: Asset Grid (Small) */}
-          <div className="flex items-center gap-4 mb-3">
+          <div className="flex items-center  gap-4 mb-3">
+
             <div className="flex items-center gap-2 p-2.5 bg-white rounded-lg border border-slate-100 shadow-xs">
-              <FaUsers className="text-sky-600" />
-              <span className="text-sm font-medium text-slate-700">40 Students</span>
+              <FaUsers className="text-sky-600 lg:block hidden" />
+              <span className="lg:text-sm text-[13px] font-medium text-slate-700">40 Students</span>
             </div>
+
             <div className="flex items-center gap-2 p-2.5 bg-white rounded-lg border border-slate-100 shadow-xs">
-              <FaBookOpen className="text-sky-600" />
-              <span className="text-sm font-medium text-slate-700">25 Lessons</span>
+              <FaBookOpen className="text-sky-600 lg:block hidden" />
+              <span className="lg:text-sm text-[13px] font-medium text-slate-700">25 Lessons</span>
             </div>
+
             <div className="flex items-center gap-2 p-2.5 bg-white rounded-lg border border-slate-100 shadow-xs">
-              <FaClock className="text-sky-600" />
-              <span className="text-sm font-medium text-slate-700">30+ Hours</span>
+              <FaClock className="text-sky-600 lg:block hidden" />
+              <span className="lg:text-sm text-[13px] font-medium text-slate-700">30+ Hours</span>
             </div>
+
           </div>
 
           {/* Detailed Info Grid with Soft White Background */}

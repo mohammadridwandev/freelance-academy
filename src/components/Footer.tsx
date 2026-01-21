@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 
 interface MenuItem {
@@ -64,7 +65,7 @@ const Footer = ({
   ],
 }: Footer2Props) => {
   return (
-    <section className={cn("lg:py-16 py-5 bg-gradient-to-b from-[#F1EAFF] to-[#FFFFFF] text-gray-800 pb-10 border-t border-gray-100", className)}>
+    <section className={cn("lg:py-16 py-5 bg-linear-to-b from-[#F1EAFF] to-[#FFFFFF] text-gray-800 pb-10 border-t border-gray-100", className)}>
 
       <div className="container m-auto px-4">
 
@@ -73,9 +74,11 @@ const Footer = ({
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
             <div className="col-span-2 mb-8 lg:mb-0">
               <div className="flex items-center gap-2 lg:justify-start">
+
                 <Link href={"/"} className="font-bold text-2xl">
-                  Freelance A
+                  <Image src={"/logo-text.png"} width={130} height={30} alt="footer logo"/>
                 </Link>
+
               </div>
               <p className="mt-4 text-muted-foreground">
                 Chattogram's leading IT training center. We provide industry-standard 
