@@ -1,5 +1,3 @@
-
-
 export interface Course {
   id: string;
   name: string;
@@ -22,15 +20,13 @@ export interface Course {
   status: "details" | "upcoming";
 }
 
-
-
 export const courseData: Course[] = [
   {
     id: "digital-marketing",
     name: "Full Stack Digital Marketing",
     courseTitle: "Master Digital Growth & Freelancing",
     overview:
-      "A career-focused program designed to prepare students for real-world digital marketing roles. We focus on hands-on learning, real projects, and global marketplace strategies.",
+      "A comprehensive program designed to transform beginners into industry-ready marketing professionals. Master SEO, social media algorithms, and high-conversion ad strategies through hands-on projects and global marketplace case studies.",
     stats: { classes: "30 Live Classes", projects: "5 Marketing Campaigns" },
     image: "/course-image/digital.webp",
     price: { regular: 20000, sale: 10000, currency: "BDT" },
@@ -62,7 +58,7 @@ export const courseData: Course[] = [
     name: "Full Stack Web Development",
     courseTitle: "Modern Web Engineering with MERN Stack",
     overview:
-      "Master the art of building scalable, high-performance web applications using React, Next.js, and Node.js. This course takes you from basic HTML/CSS to deploying complex full-stack projects.",
+      "Master modern web application development using the MERN stack. Learn to build scalable front-end interfaces with React and Next.js, and implement secure server-side logic and database management for high-performance solutions.",
     stats: { classes: "40 Live Classes", projects: "8 Real-world Projects" },
     image: "/course-image/web-desing.webp",
     price: { regular: 20000, sale: 12000, currency: "BDT" },
@@ -95,7 +91,7 @@ export const courseData: Course[] = [
     name: "Professional Graphics Design",
     courseTitle: "Visual Branding & UI/UX Design",
     overview:
-      "Learn to communicate ideas through visual content. This course covers fundamental design theory to advanced branding and UI/UX layouts using Adobe Photoshop, Illustrator, and Figma.",
+      "Learn to master industry-standard tools like Photoshop, Illustrator, and Figma. This track covers branding, typography, and UI/UX layouts, enabling you to solve visual problems and create intuitive user experiences.",
     stats: { classes: "32 Live Classes", projects: "10 Portfolio Projects" },
     image: "/course-image/graphic.webp",
     price: { regular: 18000, sale: 12000, currency: "BDT" },
@@ -127,7 +123,7 @@ export const courseData: Course[] = [
     name: "Advanced Video Editing",
     courseTitle: "Motion Graphics & Cinematic Post-Production",
     overview:
-      "Transform raw footage into compelling stories. Master Adobe Premiere Pro and After Effects to create high-quality content for YouTube, commercial ads, and films.",
+      "Unlock the secrets of cinematic storytelling. Master video assembly, color grading, and motion graphics using Premiere Pro and After Effects to create high-quality content for social media and commercial advertising.",
     stats: { classes: "28 Live Classes", projects: "6 Major Projects" },
     image: "/course-image/video.webp",
     price: { regular: 16000, sale: 12000, currency: "BDT" },
@@ -159,7 +155,7 @@ export const courseData: Course[] = [
     name: "Social Media Management",
     courseTitle: "Strategic Brand Growth & Management",
     overview:
-      "Learn to manage professional brand accounts and master social algorithms to drive organic growth and engagement.",
+      "Learn to manage professional brand presence and decode platform algorithms. Master content scheduling, community engagement, and data analytics to turn any social profile into a high-growth brand asset.",
     stats: { classes: "20 Live Classes", projects: "4 Brand Strategies" },
     image: "/course-image/Social.webp",
     price: { regular: 12000, sale: 8000, currency: "BDT" },
@@ -168,18 +164,12 @@ export const courseData: Course[] = [
       "Platform Algorithm Insights",
       "Ad Manager Setup",
     ],
-    targetAudience: [
-      "Brand Owners",
-      "Small Business Managers",
-      "Aspiring SMMs",
-    ],
+    targetAudience: ["Brand Owners", "Small Business Managers", "Aspiring SMMs"],
     skillsOutcome: [
       "Master Content Scheduling",
       "Drive Viral Growth",
       "Analytics Reporting",
     ],
-
-   
     status: "upcoming",
   },
   {
@@ -187,7 +177,7 @@ export const courseData: Course[] = [
     name: "App Development",
     courseTitle: "Cross-Platform Apps with Flutter",
     overview:
-      "Build high-performance, beautiful mobile applications for both Android and iOS using a single codebase.",
+      "Build native-quality apps for iOS and Android using Google’s Flutter framework. Master Dart, reactive UI development, and Firebase integration to go from a conceptual idea to a published mobile application.",
     stats: { classes: "35 Live Classes", projects: "3 Play Store Apps" },
     image: "/course-image/App.webp",
     price: { regular: 25000, sale: 15000, currency: "BDT" },
