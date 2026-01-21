@@ -97,6 +97,7 @@ const AllCourse = () => {
                   >
                     {course.status === "details" ? "View Details" : "Upcoming"}
                     <FaArrowRight className="size-2.5" />
+                    
                   </Link>
                 </div>
               </div>

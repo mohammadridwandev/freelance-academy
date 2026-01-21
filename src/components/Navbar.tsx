@@ -76,28 +76,30 @@ const Navbar = ({
           description:
             "Master modern UI/UX and frontend development with React & Next.js.",
           icon: <Monitor className="size-5 shrink-0" />,
-          url: "/courses",
+          url: "/courses/web-development",
         },
         {
           title: "Graphics Design",
           description:
             "Learn branding, typography, and professional asset creation.",
           icon: <Palette className="size-5 shrink-0" />,
-          url: "/courses",
+          url: "/courses/graphics-design",
         },
         {
           title: "Video Editing",
           description:
             "High-end post-production for social media and commercial films.",
           icon: <Video className="size-5 shrink-0" />,
-          url: "/courses",
+          url: "/courses/video-editing",
         },
         {
           title: "Digital Marketing",
           description: "Master SEO, SMM, and freelance marketplace strategies.",
           icon: <Megaphone className="size-5 shrink-0" />,
-          url: "/courses",
+          url: "/courses/digital-marketing",
         },
+
+
       ],
     },
     { title: "Contact", url: "/contact" },
@@ -280,6 +282,7 @@ const SubMenuLink = ({ item }: { item: MenuItem }) => {
           </p>
         )}
       </div>
+      
     </a>
   );
 };

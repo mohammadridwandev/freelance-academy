@@ -25,7 +25,6 @@ export default function TopNavbar() {
             buttonText="Claim Now"
             className="text-nowrap cursor-pointer md:flex items-center text-[11px] font-semibold text-white bg-white/20 backdrop-blur-md border border-white/30 px-5 py-1.5 rounded-full hover:bg-white hover:text-indigo-600 transition-all duration-300 uppercase tracking-widest shadow-lg"
           />
-          
         </div>
       </div>
 
