@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import ContactHub from "@/components/ContactHub";
 import toast, { Toaster } from 'react-hot-toast';
+import TopNavbar from "@/components/TopNavbar";
 
 
 const geistSans = Geist({
@@ -37,6 +38,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <TopNavbar></TopNavbar>
         <Navbar></Navbar>
         {children}
 
