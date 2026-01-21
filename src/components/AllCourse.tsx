@@ -9,6 +9,7 @@ import { DialogDemo } from "./DialogDemo";
 const AllCourse = () => {
   return (
     <section className="py-16  bg-white">
+
       <div className="container mx-auto px-4">
         {/* Header Section */}
 
@@ -97,7 +98,7 @@ const AllCourse = () => {
                   >
                     {course.status === "details" ? "View Details" : "Upcoming"}
                     <FaArrowRight className="size-2.5" />
-                    
+
                   </Link>
                 </div>
               </div>
@@ -106,6 +107,7 @@ const AllCourse = () => {
         </div>
       </div>
     </section>
+    
   );
 };
 

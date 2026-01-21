@@ -11,7 +11,7 @@ const ContactHub = () => {
     {
       icon: <FaWhatsapp className="size-5" />,
       color: "bg-[#25D366]",
-      link: "https://wa.me/yournumber",
+      link: "https://wa.me/01911407588",
     },
     {
       icon: <FaEnvelope className="size-5" />,
@@ -21,7 +21,7 @@ const ContactHub = () => {
     {
       icon: <FaPhoneAlt className="size-4" />,
       color: "bg-gray-800",
-      link: "tel:+880 1608-010885",
+      link: "tel:+880 1911407588",
     },
   ];
 

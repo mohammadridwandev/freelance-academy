@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = ({ className }: { className?: string }) => {
   const badge = "Freelance Academy";
@@ -51,14 +52,14 @@ const HeroSection = ({ className }: { className?: string }) => {
             <div className="w-full  flex py-3 items-center lg:justify-start justify-center gap-5">
 
               <Button asChild className=" sm:w-auto">
-                <a href={buttons.primary.url}>{buttons.primary.text}</a>
+                <Link href={"/courses"}>{buttons.primary.text}</Link>
               </Button>
 
               <Button asChild variant="outline" className=" sm:w-auto">
-                <a href={buttons.secondary.url}>
+                <Link href={"/join-seminar"}>
                   {buttons.secondary.text}
                   <ArrowRight className="size-4" />
-                </a>
+                </Link>
               </Button>
 
             </div>
