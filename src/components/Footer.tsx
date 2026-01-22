@@ -65,7 +65,7 @@ const Footer = ({
   ],
 }: Footer2Props) => {
   return (
-    <section className={cn("lg:py-16 py-5 bg-linear-to-b from-[#F1EAFF] to-[#FFFFFF] text-gray-800 pb-10 border-t border-gray-100", className)}>
+    <section className={cn("lg:py-16 py-12 bg-linear-to-b from-[#F1EAFF] to-[#FFFFFF] text-gray-800 pb-10 border-t border-gray-100", className)}>
 
       <div className="container m-auto px-4">
 

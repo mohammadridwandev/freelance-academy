@@ -8,12 +8,9 @@ import Image from 'next/image';
 export default function JoinSeminarPage() {
   return (
     // Applied the background image and font family here
-    <section className="font-['Poppins',_sans-serif] bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gridBackground.png')] w-full bg-no-repeat bg-cover bg-center  py-16">
+    <section className="font-['Poppins'] bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gridBackground.png')] w-full bg-no-repeat bg-cover bg-center  py-16">
 
-        <div>
-           <Image src={"/cover-image.jpeg"} width={500} height={300} alt='cover image'></Image>
-        </div>
-
+     
 
       <div className="container mx-auto px-4 max-w-5xl">
         

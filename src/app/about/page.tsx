@@ -54,6 +54,7 @@ const AboutSection = () => {
                 Muradpur, Chittagong
               </span>
             </div>
+            
           </div>
 
           {/* Right Side: Visual Stats Grid (Reduced Padding) */}
