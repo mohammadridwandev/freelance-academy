@@ -72,7 +72,7 @@ const HeroSection = ({ className }: { className?: string }) => {
               width={850}
               height={450}
               alt="hero image"
-              src="/hero image.jpeg"
+              src="/hero-image.png"
               priority
               className="rounded-2xl shadow-md object-cover"
             />
