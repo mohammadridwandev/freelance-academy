@@ -1,14 +1,5 @@
-import About_the_academy from "@/components/About_us/About_the_academy";
+
 import AcademyPage from "@/components/About_us/AcademyPage";
-import Admission_info from "@/components/About_us/Admission_info";
-import Career_Focused from "@/components/About_us/Career_Focused";
-import Career_Freelancing from "@/components/About_us/Career_Freelancing";
-import Career_Track from "@/components/About_us/Career_Track";
-import Courses_we_offer from "@/components/About_us/Courses_we_offer";
-import Who_can_join from "@/components/About_us/Who_can_join";
-import Why_choose_academy from "@/components/About_us/Why_choose_academy";
-import Image from "next/image";
-import React from "react";
 import {
   FaMapMarkerAlt,
   FaGraduationCap,
@@ -101,14 +92,7 @@ const AboutSection = () => {
         </div>
       </section>
 
-      {/* <About_the_academy></About_the_academy>
-      <Why_choose_academy></Why_choose_academy>
-      <Courses_we_offer></Courses_we_offer>
-      <Who_can_join></Who_can_join>
-      <Admission_info></Admission_info>
-      <Career_Freelancing></Career_Freelancing>
-      <Career_Focused></Career_Focused>
-      <Career_Track></Career_Track> */}
+  
       <AcademyPage></AcademyPage>
 
 
