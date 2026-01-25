@@ -30,28 +30,34 @@ export const courseData: Course[] = [
     stats: { classes: "30 Live Classes", projects: "5 Marketing Campaigns" },
     image: "/course-image/digital.webp",
     price: { regular: 20000, sale: 10000, currency: "BDT" },
+
     facilities: [
       "Online Live Batch & Review Classes",
       "Practice Lab Support",
       "Internship Opportunities",
       "Job & Freelancing Guidance",
     ],
+
     targetAudience: [
       "Students building a digital marketing career",
       "Business owners promoting their own brand",
       "Beginners with no prior marketing experience",
     ],
+
     skillsOutcome: [
       "Create and manage professional ad campaigns",
       "Generate leads through SEO and Organic Social",
       "Work with local and international clients",
     ],
+
     futureRoles: [
       "Digital Marketing Executive",
       "Social Media Marketer",
       "SEO & Ads Specialist",
     ],
+
     status: "details",
+    
   },
   {
     id: "web-development",

@@ -20,6 +20,7 @@ export default function AcademyPage() {
       <div className="absolute bottom-[20%] right-[-10%] w-[30%] h-[40%] bg-purple-50 rounded-full blur-[120px] opacity-60"></div>
 
       <div className="relative z-10">
+        
         {/* 1. Header & Signature Section */}
         <section className="max-w-5xl mx-auto px-6 pt-10 lg:pt-16">
           <div className="bg-white/80 backdrop-blur-md rounded-md lg:rounded-[2.5rem] p-6 lg:p-10 md:p-16 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white relative overflow-hidden">
@@ -109,18 +110,11 @@ export default function AcademyPage() {
                       {step.title}
                     </p>
                   </div>
-
                 </div>
-
-                
               </div>
             ))}
           </div>
-
-
         </section>
-
-
 
         {/* 4. Why & Support - Clean Dual Tone */}
         <section className="max-w-5xl items-center mx-auto px-6 mt-16 lg:mt-32 grid lg:grid-cols-2 gap-16">
@@ -145,11 +139,9 @@ export default function AcademyPage() {
                 "{whyChoose.motto}"
               </p>
             </div>
-            
           </div>
 
           <div className="flex flex-col gap-5">
-
             <div className="space-y-2">
               <h2 className="text-lg font-bold text-slate-900">
                 {support.title}
@@ -173,15 +165,12 @@ export default function AcademyPage() {
             <p className="mt-4 p-6 bg-linear-to-r from-slate-700 to-slate-600 text-white rounded-md text-base">
               {support.goal}
             </p>
-            
           </div>
-          
         </section>
 
         {/* 5. Join & Admission - Modern Cards */}
         <section className="max-w-5xl mx-auto px-6 mt-16 lg:mt-25">
           <div className="grid md:grid-cols-2 gap-10">
-            
             <div className="bg-white p-5 lg:p-8 rounded-xl lg:rounded-[2.5rem] border border-slate-100 shadow-sm">
               <h2 className="text-center text-base font-semibold uppercase  text-teal-600 mb-3">
                 {whoCanJoin.title}
@@ -207,7 +196,6 @@ export default function AcademyPage() {
               </p>
             </div>
 
-
             <div className="flex flex-col justify-center gap-6">
               <h2 className="text-xl font-semibold text-slate-900 uppercase mb-1 pl-4 border-l-4 border-teal-400">
                 {admission.title}
@@ -231,7 +219,7 @@ export default function AcademyPage() {
           </div>
         </section>
 
-        
+
       </div>
     </div>
   );

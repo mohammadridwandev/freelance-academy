@@ -1,3 +1,8 @@
+
+import Course_Section from "@/components/Coures/Course_Section";
+import InstructorSection from "@/components/Coures/InstructorSection";
+import Registration_Card from "@/components/Coures/Registration_Card";
+import Testimonials from "@/components/Testimonials";
 import { courseData } from "@/courseData";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -24,14 +29,13 @@ export default async function CourseDetails({
   return (
     <div className="bg-linear-to-b py-10 lg:py-16 from-[#F5F7FF] via-[#fffbee] to-[#E6EFFF] min-h-screen">
       <div className="max-w-5xl grid grid-cols-1  items-center gap-12 lg:grid-cols-2 m-auto px-4">
-        
         {/* Left Side: Media & Actions */}
         <div className="space-y-4">
-          <Image 
-            className="rounded-xl shadow-lg w-full object-cover" 
-            src={course.image} 
-            width={500} 
-            height={350} 
+          <Image
+            className="rounded-xl shadow-lg w-full object-cover"
+            src={course.image}
+            width={500}
+            height={350}
             alt="course image"
           />
           <div className="gap-4 flex items-center justify-between">
@@ -49,7 +53,7 @@ export default async function CourseDetails({
           <h1 className="text-3xl font-bold text-slate-900 mb-2">
             {course.name}
           </h1>
-          
+
           <p className="text-slate-600 mb-3 leading-relaxed">
             {course.overview}
           </p>
@@ -69,53 +73,80 @@ export default async function CourseDetails({
 
           {/* Row 2: Asset Grid (Small) */}
           <div className="flex items-center  gap-4 mb-3">
-
             <div className="flex items-center gap-2 p-2.5 bg-white rounded-lg border border-slate-100 shadow-xs">
               <FaUsers className="text-sky-600 lg:block hidden" />
-              <span className="lg:text-sm text-[13px] font-medium text-slate-700">40 Students</span>
+              <span className="lg:text-sm text-[13px] font-medium text-slate-700">
+                40 Students
+              </span>
             </div>
 
             <div className="flex items-center gap-2 p-2.5 bg-white rounded-lg border border-slate-100 shadow-xs">
               <FaBookOpen className="text-sky-600 lg:block hidden" />
-              <span className="lg:text-sm text-[13px] font-medium text-slate-700">25 Lessons</span>
+              <span className="lg:text-sm text-[13px] font-medium text-slate-700">
+                25 Lessons
+              </span>
             </div>
 
             <div className="flex items-center gap-2 p-2.5 bg-white rounded-lg border border-slate-100 shadow-xs">
               <FaClock className="text-sky-600 lg:block hidden" />
-              <span className="lg:text-sm text-[13px] font-medium text-slate-700">30+ Hours</span>
+              <span className="lg:text-sm text-[13px] font-medium text-slate-700">
+                30+ Hours
+              </span>
             </div>
-
           </div>
 
           {/* Detailed Info Grid with Soft White Background */}
           <div className="grid grid-cols-1 lg:grid-cols-2  gap-2 p-6 bg-linear-to-r from-violet-100 to-pink-100 rounded-xl border mb-2">
-
             <h2 className="flex items-center gap-3 text-sm font-semibold text-slate-700">
-              <FaUsers className="text-blue-500 text-base" /> 378 students joined
+              <FaUsers className="text-blue-500 text-base" /> 378 students
+              joined
             </h2>
             <h2 className="flex items-center gap-3 text-sm font-semibold text-slate-700">
-              <FaBookOpen className="text-emerald-500 text-base" /> 40 total lessons
+              <FaBookOpen className="text-emerald-500 text-base" /> 40 total
+              lessons
             </h2>
             <h2 className="flex items-center gap-3 text-sm font-semibold text-slate-700">
-              <FaClock className="text-orange-500 text-base" /> 150+ hours of lessons
+              <FaClock className="text-orange-500 text-base" /> 150+ hours of
+              lessons
             </h2>
             <h2 className="flex items-center gap-3 text-sm font-semibold text-slate-700">
-              <FaCheck className="text-purple-500 text-base" /> 3069 learners completed
+              <FaCheck className="text-purple-500 text-base" /> 3069 learners
+              completed
             </h2>
           </div>
 
           {/* Pricing Section */}
-          <div className="flex items-center gap-3 py-2">
-            <h2 className="text-lg font-bold text-slate-800 capitalize">
-              Registration Fee
-            </h2>
-            <h2 className="text-2xl font-black text-slate-900">
-              ৳10,000
-            </h2>
-          </div>
-        </div>
+          <div className="flex items-center gap-3 mt-4 py-2">
+            <div className="flex items-center gap-3">
 
+              <h2 className="font-bold  text-teal-600 text-xl lg:text-3xl">Registration Fee: </h2>
+
+              <span className="text-lg font-bold text-gray-900">
+                {course.price.sale?.toLocaleString()}
+              </span>
+
+              <span className="text-base text-gray-400 line-through">
+                {course.price.regular.toLocaleString()}
+              </span>
+            </div>
+          </div>
+
+        </div>
       </div>
+
+         <div>
+           <Course_Section courseId={id}></Course_Section>
+           <InstructorSection></InstructorSection>
+           <Testimonials></Testimonials>
+           <Registration_Card courseId={id}></Registration_Card>
+         </div>
+
+
+
+
     </div>
+
+
+
   );
 }
