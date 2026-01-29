@@ -65,9 +65,11 @@ const AllCourse = () => {
                             {course.price.currency}{" "}
                             {course.price.sale?.toLocaleString()}
                           </span>
-                          <span className="text-base text-gray-400 line-through">
+
+                          {/* <span className="text-base text-gray-400 line-through">
                             {course.price.regular.toLocaleString()}
-                          </span>
+                          </span> */}
+
                         </>
                       ) : (
                         <span className="text-lg font-semibold text-gray-900">

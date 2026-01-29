@@ -69,8 +69,8 @@ const HeroSection = ({ className }: { className?: string }) => {
           {/* hero image */}
           <div className="lg:order-last order-first">
             <Image
-              width={850}
-              height={450}
+              width={950}
+              height={550}
               alt="hero image"
               src="/hero-image.png"
               priority

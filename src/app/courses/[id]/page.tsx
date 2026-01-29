@@ -27,7 +27,7 @@ export default async function CourseDetails({
   if (!course) return notFound();
 
   return (
-    <div className="bg-linear-to-b py-10 lg:py-16 from-[#F5F7FF] via-[#fffbee] to-[#E6EFFF] min-h-screen">
+    <div className="bg-linear-to-b pt-10 lg:pt-16 from-[#F5F7FF] via-[#fffbee] to-[#E6EFFF] min-h-screen">
       <div className="max-w-5xl grid grid-cols-1  items-center gap-12 lg:grid-cols-2 m-auto px-4">
         {/* Left Side: Media & Actions */}
         <div className="space-y-4">
@@ -119,15 +119,16 @@ export default async function CourseDetails({
           <div className="flex items-center gap-3 mt-4 py-2">
             <div className="flex items-center gap-3">
 
-              <h2 className="font-bold  text-teal-600 text-xl lg:text-3xl">Registration Fee: </h2>
+              <h2 className="font-bold  text-brandColor text-xl lg:text-3xl">Registration Fee: </h2>
 
-              <span className="text-lg font-bold text-gray-900">
+              <span className="text-lg font-bold text-gray-500">
                 {course.price.sale?.toLocaleString()}
               </span>
 
-              <span className="text-base text-gray-400 line-through">
+              {/* <span className="text-base text-gray-400 line-through">
                 {course.price.regular.toLocaleString()}
-              </span>
+              </span> */}
+
             </div>
           </div>
 

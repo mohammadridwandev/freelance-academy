@@ -1,22 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import ContactHub from "@/components/ContactHub";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 import TopNavbar from "@/components/TopNavbar";
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Freelance Academy — Empowering Digital Careers",
@@ -24,9 +20,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.jpg",
   },
-
 };
-
 
 export default function RootLayout({
   children,
@@ -35,20 +29,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${poppins.variable} antialiased`}>
         <TopNavbar></TopNavbar>
         <Navbar></Navbar>
         {children}
 
         <Footer></Footer>
-      <Toaster />
+        <Toaster />
 
-      <div>
-        <ContactHub></ContactHub>
-      </div>
-
+        <div>
+          <ContactHub></ContactHub>
+        </div>
       </body>
     </html>
   );

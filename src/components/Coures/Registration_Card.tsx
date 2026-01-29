@@ -28,12 +28,14 @@ export default function Registration_Section({ courseId }: Props) {
           {/* Left Side: Attractive Marketing Content */}
           <div className="lg:col-span-7 space-y-6 md:space-y-10">
             <div className="space-y-4">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-[10px] md:text-xs font-bold uppercase tracking-widest">
+
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brandColor/10 text-brandColor text-[10px] md:text-xs font-bold uppercase tracking-widest">
                 <Zap size={14} fill="currentColor" />
                 Enrollment Open for 2026
               </span>
+
               <h2 className="text-2xl lg:text-5xl font-bold text-gray-800 leading-[1.15]">
-                Master <span className="text-teal-600">{course.name}</span> with Expert Guidance.
+                Master <span className="text-brandColor">{course.name}</span> with Expert Guidance.
               </h2>
               <p className="text-base md:text-lg text-gray-600 max-w-2xl leading-relaxed">
                 Step into a professional career with our industry-standard curriculum. 
@@ -50,7 +52,7 @@ export default function Registration_Section({ courseId }: Props) {
                 "Professional Certification",
               ].map((benefit, i) => (
                 <div key={i} className="flex items-center gap-3 text-gray-800">
-                  <CheckCircle2 className="text-teal-600 shrink-0" size={20} />
+                  <CheckCircle2 className="text-brandColor shrink-0" size={20} />
                   <span className="font-medium text-base">{benefit}</span>
                 </div>
               ))}
@@ -66,7 +68,7 @@ export default function Registration_Section({ courseId }: Props) {
                 </div>
                 <p className="text-sm font-bold text-gray-800">1.2k+ Students Joined</p>
               </div>
-              <div className="sm:ml-auto flex items-center gap-2 text-rose-600 font-bold text-sm">
+              <div className="sm:ml-auto flex items-center gap-2 text-brandColor font-bold text-sm">
                 <Clock size={16} />
                 <span>Starts: April 25, 2026</span>
               </div>
@@ -86,7 +88,7 @@ export default function Registration_Section({ courseId }: Props) {
                 {/* Features List */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className="size-10 rounded-xl border border-gray-100 flex items-center justify-center text-teal-600 bg-white shadow-sm">
+                    <div className="size-10 rounded-xl border border-gray-100 flex items-center justify-center text-brandColor bg-white shadow-sm">
                       <Video size={18} />
                     </div>
                     <div>
@@ -95,7 +97,7 @@ export default function Registration_Section({ courseId }: Props) {
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
-                    <div className="size-10 rounded-xl border border-gray-100 flex items-center justify-center text-teal-600 bg-white shadow-sm">
+                    <div className="size-10 rounded-xl border border-gray-100 flex items-center justify-center text-brandColor bg-white shadow-sm">
                       <GraduationCap size={18} />
                     </div>
                     <div>
@@ -137,11 +139,11 @@ export default function Registration_Section({ courseId }: Props) {
 
                 {/* Buttons */}
                 <div className="space-y-3 pt-4">
-                  <button className="w-full flex items-center justify-center gap-2 rounded-xl bg-teal-600 h-14 text-base font-bold text-white hover:bg-teal-700 shadow-md transition-all active:scale-[0.98]">
+                  <button className="w-full flex items-center justify-center gap-2 rounded-xl bg-brandColor h-14 text-base font-bold text-white hover:bg-brandColor shadow-md transition-all active:scale-[0.98]">
                     Enroll Now
                     <ArrowRight size={18} />
                   </button>
-                  <button className="w-full flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white h-12 text-sm font-bold text-gray-700 hover:border-teal-600 hover:text-teal-600 transition-all">
+                  <button className="w-full flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white h-12 text-sm font-bold text-gray-700 hover:border-teal-600 hover:text-brandColor transition-all">
                     <Download size={16} />
                     Download Outline
                   </button>
