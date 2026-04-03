@@ -6,13 +6,13 @@ import { Footer } from "@/components/Footer";
 import ContactHub from "@/components/ContactHub";
 import toast, { Toaster } from "react-hot-toast";
 import TopNavbar from "@/components/TopNavbar";
+import Scrollbar from "@/components/Scrollbar";
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
 });
-
 
 export const metadata: Metadata = {
   title: "Freelance Academy — Empowering Digital Careers",
@@ -28,18 +28,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={`${poppins.variable} antialiased`}>
-        <TopNavbar></TopNavbar>
-        <Navbar></Navbar>
-        {children}
+        <Scrollbar>
+          <TopNavbar></TopNavbar>
+          <Navbar></Navbar>
+          {children}
 
-        <Footer></Footer>
-        <Toaster />
+          <Footer></Footer>
+          <Toaster />
 
-        <div>
-          <ContactHub></ContactHub>
-        </div>
+          <div>
+            <ContactHub></ContactHub>
+          </div>
+        </Scrollbar>
       </body>
     </html>
   );
